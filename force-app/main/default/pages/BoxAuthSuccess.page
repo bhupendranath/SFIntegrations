@@ -1,0 +1,14 @@
+<apex:page controller="BoxAuthController" action="{!getAccessToken}">
+    {!body}
+    <br/>
+    <br/>
+    <table>
+        <apex:repeat value="{!folderItems}" var="items">
+            <tr>
+                <td>{!items.id_x}</td>
+                <td>{!items.type_x}</td>
+                <td>{!items.name_x}</td> 
+            </tr>
+        </apex:repeat>
+    </table>
+</apex:page>
