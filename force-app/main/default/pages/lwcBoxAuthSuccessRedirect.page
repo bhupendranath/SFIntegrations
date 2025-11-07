@@ -1,0 +1,16 @@
+<apex:page >
+    <script>
+        window.onload = onLoad;
+        function onLoad(){
+
+            const code = getUrlParamValue(window.location.href, 'code');
+            //location.href = 'https://sfdevcom13-dev-ed.develop.lightning.force.com/lightning/n/Box_Auth_Initiator?c__code=' + code;
+            //here for this lightning page we can exclude base url [https://sfdevcom13-dev-ed.develop.lightning.force.com] and will add c__ namespace for auth 'code'
+            location.href = '/lightning/n/Box_Auth_Initiator?c__code=' + code;
+        }
+
+        function getUrlParamValue(url,key){
+            return new URL(url).searchParams.get(key);
+        }
+    </script>
+</apex:page>

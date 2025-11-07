@@ -1,0 +1,14 @@
+<apex:page controller="BulkAPIAccountQueryController" action="{!fetchRecords}">
+    
+    <apex:pageBlock id="out">
+        <apex:pageBlockTable value="{!accountListWrapper}" var="aRecord">
+              <apex:column value="{!aRecord.Id}" headerValue="Account Id"/>
+              <apex:column value="{!aRecord.Name}" headerValue="Name"/>
+              <apex:column value="{!aRecord.Industry}" headerValue="Industry"/>
+              <apex:column value="{!aRecord.Rating}" headerValue="Rating"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:form >
+       <apex:commandButton value="Next" action="{!fetchRecords}" reRender="out"/>
+    </apex:form>
+</apex:page>
