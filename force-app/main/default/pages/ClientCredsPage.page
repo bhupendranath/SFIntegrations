@@ -1,0 +1,6 @@
+<apex:page controller="ClientCredsController">
+    {!body}
+    <apex:form >
+        <apex:commandButton value="Get Authenticated" action="{!authenticate}" />
+    </apex:form>
+</apex:page>
